@@ -54,7 +54,7 @@ export function NavigationBarMain() {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-muted-foreground leading-tight">Products</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 lg:w-[700px] lg:grid-cols-[.75fr_1fr]">
+                <ul className="grid gap-3 p-6 lg:w-[700px] lg:grid-cols-[1fr_1fr]">
                   <ListItem title="Latest AI technology">Bring productivity towards management.</ListItem>
                   <ListItem title="Automatic timekeeping">Manage human resources in an orderly and clear manner.</ListItem>
                   <ListItem title="Analyze business sales">Helps businesses have a clearer view of company revenue.</ListItem>
@@ -167,7 +167,7 @@ export function NavigationBarFeatures() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink href="https://github.com/Yubikitasu/satherua-project" target="_blank" className={navigationMenuTriggerStyle()}>
             <GitHubLogoIcon />
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -176,6 +176,19 @@ export function NavigationBarFeatures() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
+  )
+}
+
+export function NavigationBar() {
+  return (
+    <div className="sticky top-0 left-0 w-full h-14 flex items-center border-solid border-b-[.5px] shadow-sm bg-background">
+      <div className="absolute left-0 ms-16"> 
+        <NavigationBarMain></NavigationBarMain>
+      </div>
+      <div className="absolute right-0 me-16">
+        <NavigationBarFeatures></NavigationBarFeatures>
+      </div>
+    </div>
   )
 }
 
