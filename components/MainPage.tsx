@@ -10,10 +10,10 @@ import BasicBars from './BarsDemo'
 export default function MainPage() {
     return (
         <div className="main-page">
-            <div className="flex w-full h-[500px] justify-center items-center bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:50px_50px]">
+            <div className="flex w-full h-[500px] justify-center items-center bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:50px_50px] p-12">
                 <li className="list-none">
                     <div className={GeistMono.className + " mx-10 text-xl transition-colors font-black flex justify-center items-center"}><LayersIcon className="mx-2"/> Satherua</div>
-                    <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight'>Powerful management platform. Built for productivity.</h1>
+                    <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-center'>Powerful management platform. Built for productivity.</h1>
                     <div className="text-center text-xl leading-7">Satherua is trusted by multiple companies and 50.000+ customers.</div>
                     <div className="flex justify-center items-center my-3">
                         <Button className="mx-1">Learn more <ChevronRightIcon className="h-4 w-4" /></Button>
@@ -34,8 +34,8 @@ export default function MainPage() {
                 </li>
             </div> */}
             <div className="w-full">
-                <div className="w-full grid lg:grid-cols-2">
-                    <div className="flex w-full h-full justify-center items-center p-24">
+                <div className="w-full grid lg:grid-cols-2 overflow-hidden">
+                    <div className="flex w-full h-full justify-center items-center p-12 md:p-24">
                         <li className="list-none">
                             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight">Bring your teams together.</h1>
                             <div className="m-w-[600px] my-3 text-wrap">At the heart of Satherua are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies.</div>

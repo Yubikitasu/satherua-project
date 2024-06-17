@@ -13,17 +13,17 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { ChevronRightIcon, GitHubLogoIcon, HomeIcon, LayersIcon, MagnifyingGlassIcon, PersonIcon } from "@radix-ui/react-icons"
+import { ChevronRightIcon, GitHubLogoIcon, HamburgerMenuIcon, HomeIcon, LayersIcon, MagnifyingGlassIcon, PersonIcon } from "@radix-ui/react-icons"
 import { ModeToggle } from "./modetoggle"
 import { Button } from "./ui/button"
 
 export function NavigationBar() {
   return (
     <div className="sticky top-0 left-0 w-full h-14 flex items-center border-solid border-b-[.5px] shadow-sm bg-background z-20">
-      <div className="absolute left-0 ms-16"> 
+      <div className="absolute left-0 xl:ms-16"> 
         <NavigationBarMain></NavigationBarMain>
       </div>
-      <div className="absolute right-0 me-16">
+      <div className="absolute right-0 xl:me-16 me-8">
         <NavigationBarFeatures></NavigationBarFeatures>
       </div>
     </div>
@@ -39,13 +39,13 @@ export function NavigationBarMain() {
                 <div className={GeistMono.className + " mx-10 transition-colors hover:font-black flex justify-center items-center font-bold"}><LayersIcon className="mx-2"/> Satherua</div>
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem className="text-muted-foreground leading-tight">
+            <NavigationMenuItem className="text-muted-foreground leading-tight hidden lg:inline-flex">
               <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
                 <div>Home</div>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-muted-foreground leading-tight">Getting started</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-muted-foreground leading-tight hidden lg:inline-flex">Getting started</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
@@ -65,7 +65,7 @@ export function NavigationBarMain() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-muted-foreground leading-tight">Products</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-muted-foreground leading-tight hidden lg:inline-flex">Products</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 lg:w-[700px] lg:grid-cols-[1fr_1fr]">
                   <ListItem title="Latest AI technology">Bring productivity towards management.</ListItem>
@@ -83,7 +83,7 @@ export function NavigationBarMain() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            <NavigationMenuItem className="text-muted-foreground leading-tight">
+            <NavigationMenuItem className="text-muted-foreground leading-tight hidden lg:inline-flex">
               <NavigationMenuTrigger>Pricing</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 lg:w-[900px] lg:h-[500px] lg:grid-cols-[.75fr_.75fr_.75fr_.75fr]">
@@ -155,7 +155,7 @@ export function NavigationBarMain() {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            <NavigationMenuItem className="text-muted-foreground leading-tight">
+            <NavigationMenuItem className="text-muted-foreground leading-tight hidden lg:inline-flex">
               <NavigationMenuLink href="/" className={navigationMenuTriggerStyle() + " border-solid border-[1px]"}>
                 Request a Live Demo
               </NavigationMenuLink>
@@ -169,23 +169,28 @@ export function NavigationBarFeatures() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="sm:inline-flex hidden">
           <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
             <MagnifyingGlassIcon />
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="sm:inline-flex hidden">
           <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
             <PersonIcon />
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="sm:inline-flex hidden">
           <NavigationMenuLink href="https://github.com/Yubikitasu/satherua-project" target="_blank" className={navigationMenuTriggerStyle()}>
             <GitHubLogoIcon />
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="sm:inline-flex hidden">
           <ModeToggle />
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Button variant="ghost">
+            <HamburgerMenuIcon className="lg:hidden"/>
+          </Button>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
