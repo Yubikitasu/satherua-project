@@ -3,16 +3,9 @@ import { ChevronRightIcon, GitHubLogoIcon, LayersIcon } from '@radix-ui/react-ic
 import { GeistMono } from 'geist/font/mono'
 import { Button } from './ui/button'
 import Link from 'next/link'
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-  } from "@/components/ui/navigation-menu"
-import { PrototypeMail, PrototypeNavBar } from './PrototypeMainLayout'
+import { PrototypeBorder, PrototypeNavBar } from './PrototypeMainLayout'
+import { CalendarDefault } from './calendar_default'
+import { AvatarDemo } from './avatar_demo'
 export default function MainPage() {
     return (
         <div className="main-page">
@@ -49,7 +42,44 @@ export default function MainPage() {
                         </li>
                     </div>
                     <div className="flex w-full h-full justify-center items-center py-2 ps-2 ">
-                        <PrototypeMail></PrototypeMail>
+                        <PrototypeBorder>
+                            <PrototypeNavBar></PrototypeNavBar>
+
+                            <div className="absolute grid grid-cols-[330px_auto] pt-14 top-0 left-0 w-full h-full border-solid border-e-2 shadow-lg">
+
+                                <div className="relative top-0 p-6 left-0 h-full border-solid border-e-2 shadow-lg max-w-[330px]">
+                                    <CalendarDefault></CalendarDefault>
+                                    {/* Chats */}
+                                    <div className="grid my-3 p-2 hover:bg-accent rounded grid-cols-[.20fr_.80fr] cursor-pointer">
+                                        <div className="flex justify-center items-center">
+                                            <AvatarDemo src="" fallback="FA"></AvatarDemo>
+                                        </div>
+                                        <div className="flex justify-start items-center">
+                                            <li className="list-none">
+                                                <div className="font-bold text-md leading-tight">Fred Albert</div>
+                                                <div className="text-muted-foreground max-w-[270px] leading-tight text-sm line-clamp-1">Hey I got this project I need to finish it now.</div>
+                                                <div className="text-muted-foreground max-w-[296px] leading-tight text-xs line-clamp-1">12 hours ago</div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div className="grid my-3 p-2 hover:bg-accent rounded grid-cols-[.20fr_.80fr] cursor-pointer">
+                                        <div className="flex justify-center items-center">
+                                            <AvatarDemo src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/00/001e683f452f183b3d9e9f4a4a3aac580bcd05f1_full.jpg" fallback="FA"></AvatarDemo>
+                                        </div>
+                                        <div className="flex justify-start items-center">
+                                            <li className="list-none">
+                                                <div className="font-bold text-md leading-tight">Eric Fatima</div>
+                                                <div className="text-muted-foreground max-w-[270px] leading-tight text-sm line-clamp-1">The back-end have some problems back there. Can you go fix it?</div>
+                                                <div className="text-muted-foreground max-w-[296px] leading-tight text-xs line-clamp-1">12 hours ago</div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            
+                        </PrototypeBorder>
                     </div>
                 </div>
             </div>

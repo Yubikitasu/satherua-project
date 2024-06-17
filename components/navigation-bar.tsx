@@ -17,6 +17,19 @@ import { ChevronRightIcon, GitHubLogoIcon, HomeIcon, LayersIcon, MagnifyingGlass
 import { ModeToggle } from "./modetoggle"
 import { Button } from "./ui/button"
 
+export function NavigationBar() {
+  return (
+    <div className="sticky top-0 left-0 w-full h-14 flex items-center border-solid border-b-[.5px] shadow-sm bg-background z-20">
+      <div className="absolute left-0 ms-16"> 
+        <NavigationBarMain></NavigationBarMain>
+      </div>
+      <div className="absolute right-0 me-16">
+        <NavigationBarFeatures></NavigationBarFeatures>
+      </div>
+    </div>
+  )
+}
+
 export function NavigationBarMain() {
     return(
         <NavigationMenu>
@@ -176,19 +189,6 @@ export function NavigationBarFeatures() {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
-}
-
-export function NavigationBar() {
-  return (
-    <div className="sticky top-0 left-0 w-full h-14 flex items-center border-solid border-b-[.5px] shadow-sm bg-background">
-      <div className="absolute left-0 ms-16"> 
-        <NavigationBarMain></NavigationBarMain>
-      </div>
-      <div className="absolute right-0 me-16">
-        <NavigationBarFeatures></NavigationBarFeatures>
-      </div>
-    </div>
   )
 }
 

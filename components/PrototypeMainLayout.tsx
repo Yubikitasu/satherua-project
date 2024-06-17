@@ -9,18 +9,9 @@ import {
 } from "@/components/ui/navigation-menu"
 
 import React, { ReactNode } from "react";
-import { cn } from "@/lib/utils"
 
 interface Props {
     children_navbar: ReactNode;
-}
-
-export function PrototypeMail() {
-    return (
-        <PrototypeBorder>
-            <PrototypeNavBar></PrototypeNavBar>
-        </PrototypeBorder>
-    )
 }
 
 const PrototypeBorder = React.forwardRef<
@@ -28,7 +19,7 @@ const PrototypeBorder = React.forwardRef<
   React.ComponentPropsWithoutRef<"a">
 >(({children,}) => {
   return (
-    <div className="w-full h-full rounded border-solid border-s-2 border-t-2 border-b-2 bg-background">
+    <div className="w-full h-full relative rounded border-solid border-s-2 border-t-2 border-b-2 bg-background shadow-2xl overflow-hidden">
         {children}
     </div>
   )
@@ -37,7 +28,7 @@ PrototypeBorder.displayName = "PrototypeBorder"
 
 export function PrototypeNavBar() {
     return (
-        <div className="sticky top-0 left-0 w-full h-14 flex items-center border-solid border-b-[.5px] shadow-sm bg-background">
+        <div className="relative top-0 left-0 w-full h-14 flex items-center border-solid border-b-[.5px] shadow-sm bg-background z-10">
             <div className="absolute left-0 mx-2">
             <NavigationMenu>
                 <NavigationMenuList>
@@ -69,4 +60,8 @@ export function PrototypeNavBar() {
             </div>
         </div>
     )
+}
+
+export {
+    PrototypeBorder,
 }
