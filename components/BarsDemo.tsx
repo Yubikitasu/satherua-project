@@ -1,13 +1,27 @@
 import * as React from 'react';
-import { BarChart } from '@mui/x-charts/BarChart';
+import { ChartContainer } from '@mui/x-charts/ChartContainer';
+import { BarPlot } from '@mui/x-charts/BarChart';
 
-export default function BasicBars() {
+const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
+const xLabels = [
+  'Page A',
+  'Page B',
+  'Page C',
+  'Page D',
+  'Page E',
+  'Page F',
+  'Page G',
+];
+
+export default function TinyBarChart() {
   return (
-    <BarChart
-      xAxis={[{ scaleType: 'band', data: ['Team Dennis', 'Team John', 'Team Adams'] }]}
-      series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
+    <ChartContainer
       width={500}
       height={300}
-    />
+      series={[{ data: uData, label: 'uv', type: 'bar' }]}
+      xAxis={[{ scaleType: 'band', data: xLabels }]}
+    >
+      <BarPlot />
+    </ChartContainer>
   );
 }
