@@ -19,7 +19,7 @@ const PrototypeBorder = React.forwardRef<
   React.ComponentPropsWithoutRef<"a">
 >(({children,}) => {
   return (
-    <div className="w-full h-full relative rounded border-solid border-s-2 border-t-2 border-b-2 bg-background shadow-2xl overflow-hidden">
+    <div className="w-[800px] h-full relative rounded border-solid border-s-2 border-t-2 border-b-2 bg-background overflow-hidden">
         {children}
     </div>
   )
