@@ -85,7 +85,7 @@ export default function MainPage() {
                                         <div className="flex justify-start items-center">
                                             <li className="list-none">
                                                 <div className="text-md leading-tight">Jacob Anderson</div>
-                                                <div className="text-muted-foreground max-w-[270px] leading-tight text-sm line-clamp-1">You: Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and have some ideas I'd like to share.</div>
+                                                <div className="text-muted-foreground max-w-[270px] leading-tight text-sm line-clamp-1">You: Hi, let&apos;s have a meeting tomorrow to discuss the project. I&apos;ve been reviewing the project details and have some ideas I&apos;d like to share.</div>
                                                 <div className="text-muted-foreground max-w-[296px] leading-tight text-xs line-clamp-1">2 days ago</div>
                                             </li>
                                         </div>
