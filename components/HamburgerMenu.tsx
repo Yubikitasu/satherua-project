@@ -89,7 +89,7 @@ export function HamburgerMenu() {
                     <Link href="https://github.com/Yubikitasu/satherua-project" target="_blank">
                         <CommandItem>
                             <GitHubLogoIcon className="mr-2 h-4 w-4" />
-                            <span>View on Github</span>
+                            <span>View on GitHub</span>
                         </CommandItem>
                     </Link>
                     
