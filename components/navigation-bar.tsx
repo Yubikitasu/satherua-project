@@ -40,7 +40,7 @@ export function NavigationBarMain() {
                 <div className={GeistMono.className + " mx-10 transition-colors hover:font-black flex justify-center items-center font-bold"}><LayersIcon className="mx-2"/> Satherua</div>
               </NavigationMenuLink>
             </NavigationMenuItem> 
-            <NavigationMenuItem className="text-muted-foreground leading-tight hidden pointer-events-none lg:inline-flex">
+            <NavigationMenuItem className="text-muted-foreground leading-tight hidden lg:inline-flex">
               <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
                 <div>Home</div>
               </NavigationMenuLink>
