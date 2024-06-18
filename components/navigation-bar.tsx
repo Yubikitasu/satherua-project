@@ -16,6 +16,7 @@ import {
 import { ChevronRightIcon, GitHubLogoIcon, HamburgerMenuIcon, HomeIcon, LayersIcon, MagnifyingGlassIcon, PersonIcon } from "@radix-ui/react-icons"
 import { ModeToggle } from "./modetoggle"
 import { Button } from "./ui/button"
+import { HamburgerMenu } from "./HamburgerMenu"
 
 export function NavigationBar() {
   return (
@@ -38,8 +39,8 @@ export function NavigationBarMain() {
               <NavigationMenuLink href="/">
                 <div className={GeistMono.className + " mx-10 transition-colors hover:font-black flex justify-center items-center font-bold"}><LayersIcon className="mx-2"/> Satherua</div>
               </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem className="text-muted-foreground leading-tight hidden lg:inline-flex">
+            </NavigationMenuItem> 
+            <NavigationMenuItem className="text-muted-foreground leading-tight hidden pointer-events-none lg:inline-flex">
               <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
                 <div>Home</div>
               </NavigationMenuLink>
@@ -169,28 +170,26 @@ export function NavigationBarFeatures() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem className="sm:inline-flex hidden">
+        <NavigationMenuItem className="lg:inline-flex hidden">
           <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
             <MagnifyingGlassIcon />
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem className="sm:inline-flex hidden">
+        <NavigationMenuItem className="lg:inline-flex hidden">
           <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
             <PersonIcon />
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem className="sm:inline-flex hidden">
+        <NavigationMenuItem className="lg:inline-flex hidden">
           <NavigationMenuLink href="https://github.com/Yubikitasu/satherua-project" target="_blank" className={navigationMenuTriggerStyle()}>
             <GitHubLogoIcon />
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem className="sm:inline-flex hidden">
+        <NavigationMenuItem>
           <ModeToggle />
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Button variant="ghost">
-            <HamburgerMenuIcon className="lg:hidden"/>
-          </Button>
+        <NavigationMenuItem className="lg:hidden">
+          <HamburgerMenu></HamburgerMenu>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
