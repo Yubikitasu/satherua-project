@@ -130,6 +130,56 @@ export default function MainPage() {
                     </div>
                 </div>
             </div>
+
+            <div className="w-full py-12">
+                <div className="flex w-full h-full justify-center items-center">
+                    <li className="list-none w-full">
+                        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-center">Teams rely on Satherua.</h1>
+                        <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full sm:p-12">
+                            <div className='flex justify-center items-center h-36 p-5'>
+                                <li className='list-none'>
+                                    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight">85%</h1>
+                                    <div className="max-w-[200px]">
+                                    of users say Satherua has improved communication
+                                    </div>
+                                </li>
+                            </div>
+                            <div className='flex justify-center items-center h-36 p-5'>
+                                <li className='list-none'>
+                                    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight">
+                                        90%
+                                    </h1>
+                                    <div className="max-w-[200px]">
+                                    of teams say Satherua improved management
+                                    </div>
+                                </li>
+                            </div>
+                            <div className='flex justify-center items-center h-36 p-5'>
+                                <li className='list-none'>
+                                    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight">86%</h1>
+                                    <div className="max-w-[200px]">
+                                    feel their ability to work remotely has improved
+                                    </div>
+                                </li>
+                            </div>
+                            <div className='flex justify-center items-center h-36 p-5'>
+                                <li className='list-none'>
+                                    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight">83%</h1>
+                                    <div className="max-w-[200px]">
+                                    feels more connected to their teams
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                        <div className="flex justify-center items-center my-3">
+                            <li className="grid grid-cols-1 sm:grid-cols-2 list-none">
+                                <Button className="m-1">See the statistics <ChevronRightIcon className="h-4 w-4" /></Button>
+                                <Button className="m-1">Meet Satherua for enterprise <ChevronRightIcon className="h-4 w-4" /></Button>
+                            </li>
+                        </div>
+                    </li>
+                </div>
+            </div>
         </div>
     )
 }
